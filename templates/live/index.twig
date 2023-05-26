@@ -1,0 +1,13 @@
+{% extends "forms/_layout" %}
+
+{% set pageTitle = "Home" %}
+{% set page = "welcome" %}
+
+{% block content %}
+
+        <h1>Livestream</h1>
+
+        {{ sprig('_components/livestream') }}
+
+{{ craft.disqus.disqusEmbed(DISQUS_IDENTIFIER, DISQUS_TITLE, DISQUS_URL, DISQUS_CATEGORY_ID, DISQUS_LANGUAGE) }}
+{% endblock %}

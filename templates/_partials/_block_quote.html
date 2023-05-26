@@ -1,0 +1,12 @@
+<div class="wrap-fixed">
+    <div class="row top-xs">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+            <div class="box blog-wrapper blog-section">
+                {% if block.heading |length %}
+                    <h3 class="blog">{{ block.heading |smartypants }}</h3>
+                {% endif %}
+                <blockquote class="blockquote">{{ block.quote |typogrify }}</blockquote>
+            </div>
+        </div>
+    </div>
+</div>

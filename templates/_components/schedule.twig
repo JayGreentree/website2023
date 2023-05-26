@@ -1,0 +1,98 @@
+<style>
+
+    .chop-cal .chop-row {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .chop-cal .chop-row {
+        background: #fff;
+        display: flex;
+        max-width: 400px;
+        width: 100%;
+        flex-direction: row;
+        /*padding: 12px 8px;*/
+        border-bottom: solid #B23615 1px
+    }
+
+    .chop-cal,
+    .chop-cal .chop-month,
+    .chop-cal .chop-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+
+    .chop-cal .chop-month {
+        padding-right: 12px;
+        flex: 1 0 10%;
+        color: #00a1d8;
+        background-color: black;
+        border-right: 1px solid #B23615;
+        font-weight: 700;
+        font-size: 18px
+    }
+
+    .chop-cal .chop-month .chop-day {
+        align-self: center
+    }
+
+    .chop-cal .chop-title {
+        flex: 0 1 90%;
+        text-align: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 16px
+    }
+
+    .chop-cal .chop-title .chop-time {
+        font-size: 10px
+    }
+
+    .chop-cal .chop-row {
+        border-bottom: solid #cdcdcd 1px;
+        padding: 0;
+    }
+    .chop-cal .chop-title {
+        font-size: 18px;
+        align-items: flex-start;
+        padding: 10px;
+        text-align: left;
+    }
+    .chop-cal .chop-month {
+        display: block;
+        background: #B23615;
+        color: #FFFFFF;
+        border: none;
+        padding: 13px 8px 2px;
+        font-size: 15px;
+        text-align: center;
+        font-weight: normal;
+    }
+    .chop-cal .chop-month .chop-day {
+        font-size: 30px;
+        font-weight: bold;
+
+    }
+    .chop-cal .chop-title .chop-time {
+        font-size: 16px;
+        align-self: flex-start;
+        margin-top: 0;
+    }
+</style>
+<div id="all-cal">
+    {% set currentEventId = craft.app.request.getSegment(3) %}
+    {% for event in craft.calendar.events({id: 'not ' ~ currentEventId,rangeStart: 'today',rangeEnd: '2 month',limit: 5}) %}
+        <div class="chop-cal">
+            <div class="chop-row">
+                <div class="chop-month">{{ event.startDate.format("M") }}
+                    <span class="chop-day">{{ event.startDate.format("d") }}</span>
+                </div>
+                <div class="chop-title">
+					<span class="chop-time">{{ event.startDate.format("h:i A") }}
+						EST</span>
+                    {{ event.title }}</div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

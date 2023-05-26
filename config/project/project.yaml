@@ -1,0 +1,167 @@
+dateModified: 1685130031
+email:
+  fromEmail: jgreentreevin@gmail.com
+  fromName: JayGreentree
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/images'
+    type: craft\fs\Local
+    url: '@web/images/'
+meta:
+  __names__:
+    0cdcd776-f907-47b2-88ba-addf34ae5f80: Alert # Alert
+    0d7436da-5d92-4df3-a3a1-b3523e2083ac: 'Show Alert' # Show Alert
+    1b9a1006-8eb4-4031-bd8b-a37235326080: Quote # Quote
+    2a3a543b-a7cf-4d41-a8a5-66dd923b6d70: Text # Text
+    4a2d1c31-d509-4982-b23a-571a07c79cb9: 'Alert Title' # Alert Title
+    4a958693-7fff-4370-9cb0-f29094b9a59a: 'Blog Content' # Blog Content
+    4f531d63-b851-4c84-84ba-79650a9785a9: Home # Home
+    5e38f370-37ce-46c3-9ec1-c316ef709035: header # header
+    6aef760e-2f80-4846-a018-eda430717921: 'Code Type' # Code Type
+    7d22a631-a00b-48c7-8749-78b1d56ba997: Quote # Quote
+    8d062821-eba9-49af-a1e0-6a7592a2e63f: Globals # Globals
+    9f56bd18-1a27-49aa-a1e4-89d8205977e9: Default # Default
+    23a1d3b8-287e-42c4-b2a9-d632088a77a7: Home # Home
+    030d2dcd-d5bc-4228-8924-3ab95c77d733: JayGreentree # JayGreentree
+    96b8ae46-c320-449e-bdf1-4bb729ce9716: Heading # Heading
+    99db65d5-c28d-46fc-8730-4bca558848f1: Common # Common
+    782a6dfd-0610-429b-ac8b-d2cb3f901452: Pages # Pages
+    938dd9a3-05de-4d60-897b-0f0b0ff1bbe9: Images # Images
+    954afdc9-9207-4fa5-9909-6ad99c7bf738: Image # Image
+    5418dc77-3a9d-47ed-86cb-86b5abc81f93: Code # Code
+    7105bdf9-b659-4be7-86fb-82b5842a9aac: Images # Images
+    43861b32-59cb-4aad-b7ea-61bca5342682: JayGreentree # JayGreentree
+    42966212-4cf7-4422-97b7-2510039e1f19: Image # Image
+    66072694-b792-4b64-aff3-32d4454130ec: Full # Full
+    a3ff4fe4-82c2-43b6-a825-296557d46d0e: 'Image Type' # Image Type
+    b071fc16-5078-49ac-9617-b1d59ff814c0: 'Code Link' # Code Link
+    b8d73f6c-a618-45fb-9c77-904604384423: Default # Default
+    b346d35a-bfd0-489d-a4e4-d32d51c88a5f: Text # Text
+    bb6b31fd-806e-4143-b349-033933ea6b59: Live # Live
+    bbb1df12-20bd-42bc-8ebe-978230aa6bb2: Code # Code
+    c3ba62f6-c044-44de-b585-046b4f24f903: Heading # Heading
+    c94b6dab-6aa5-44f9-ae66-4527a5f9ca7d: Live # Live
+    e359c969-d069-421c-b709-6cf6a53e96e4: 'Page Content' # Page Content
+    f9b5877f-2875-4d52-98b6-c47fa828f4b0: 'Alert Style' # Alert Style
+    fad59bae-c2d1-466d-a3b9-cb716d8da59d: Simple # Simple
+plugins:
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '2.0'
+  calendar:
+    edition: pro
+    enabled: true
+    licenseKey: O0A0644FDIW0SNY5SLXV8JN5
+    schemaVersion: 4.0.2
+    settings:
+      allDay: ''
+      authoredEventEditOnly: false
+      defaultView: month
+      demoBannerDisabled: null
+      descriptionFieldHandle: null
+      eventDuration: '60'
+      firstDayOfWeek: -1
+      guestAccess: null
+      locationFieldHandle: null
+      overlapThreshold: '5'
+      pluginName: null
+      quickCreateEnabled: true
+      showDisabledEvents: true
+      showMiniCal: true
+      timeFormat: auto
+      timeInterval: '15'
+  calendar-links:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  calendarize:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.3.0
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  cp-clearcache:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  disqus:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      customLogin: false
+      disqusPublicKey: ''
+      disqusSecretKey: ''
+      disqusShortname: jaygreentree
+      loginButton: ''
+      loginHeight: 400
+      loginIcon: ''
+      loginLogoutUrl: ''
+      loginName: ''
+      loginUrl: ''
+      loginWidth: 800
+      useSSO: false
+  express-forms:
+    edition: lite
+    enabled: true
+    schemaVersion: 1.0.2
+    settings:
+      duplicatePreventionEnabled: true
+      emailNotificationsDirectoryPath: /var/www/html/templates/forms/_notifications
+      enhancedUI: true
+      honeypotBehaviour: simulate_success
+      honeypotEnabled: false
+      honeypotInputName: form_handler
+      name: null
+      recaptchaEnabled: true
+      recaptchaLoadScript: true
+      recaptchaSecretKey: 6Ldsqm0UAAAAAPuwk_T6H4NhL6s06_757vfnnxmN
+      recaptchaSiteKey: 6Ldsqm0UAAAAABW5NO6_7ty1rgLwNNRm1I7l6yYQ
+      recaptchaTheme: dark
+      showErrorLogBanner: true
+  imager-x:
+    edition: lite
+    enabled: true
+    licenseKey: 9EP1O3KYBPLDZR5FCKXHKD5V
+    schemaVersion: 4.0.0
+  publisher-x:
+    edition: standard
+    enabled: true
+    licenseKey: BMOQASCH49PPRT22V2TTXWR9
+    schemaVersion: 2.0.6
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: EEIPWLPS8C4VBP4YKQW7EJI6
+    schemaVersion: 3.0.11
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  youtubeliveembed:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: JayGreentree
+  schemaVersion: 4.4.0.4
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

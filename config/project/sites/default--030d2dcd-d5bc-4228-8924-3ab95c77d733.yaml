@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: JayGreentree
+primary: true
+siteGroup: 43861b32-59cb-4aad-b7ea-61bca5342682 # JayGreentree
+sortOrder: 1

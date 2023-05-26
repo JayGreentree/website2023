@@ -1,0 +1,67 @@
+fieldLayouts:
+  bbe9820a-869d-4bb3-b87b-45058e0378a5:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 7ddda86e-a3a1-433d-a43e-b29d9281d3b2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 938dd9a3-05de-4d60-897b-0f0b0ff1bbe9 # Images
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4882d20c-df03-4637-afa0-c5ce5b5ce5d2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0a9ad49b-8b68-4e60-aceb-ae89c17e7d51
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e2a97498-a31d-4484-b3a2-237503b51eb5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 2e4d0d7c-8ff9-45bc-929d-05f2589cc21f
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 782a6dfd-0610-429b-ac8b-d2cb3f901452 # Pages
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

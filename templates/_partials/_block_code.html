@@ -1,0 +1,20 @@
+<div class="wrap-fixed">
+    <section class="blog-section">
+        <div class="row top-xs">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                <div class="box blog-code-wrapper">
+                    <pre class="line-numbers"><code class="language-{{ block.codeType }}">{{ block.code }}</code></pre>
+                    {% if block.caption |length %}
+                    <aside class="blog-code-caption">
+                    {% if block.codeLink |length %}
+                        <h5 class="blog-code-caption"><i class="icon-code"></i> <a class="blog-code-caption" href="{{ block.codeLink }}" target="_blank">{{ block.caption }}</a></h5>
+                    {% else %}
+                        <h5 class="blog-code-caption"><i class="icon-code"></i> {{ block.caption }}</h5>
+                    {% endif %}
+                    </aside>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

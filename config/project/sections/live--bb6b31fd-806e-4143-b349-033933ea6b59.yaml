@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: live
+name: Live
+propagationMethod: all
+siteSettings:
+  030d2dcd-d5bc-4228-8924-3ab95c77d733: # JayGreentree
+    enabledByDefault: true
+    hasUrls: true
+    template: live/index.twig
+    uriFormat: live
+type: single

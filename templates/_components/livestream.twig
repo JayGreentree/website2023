@@ -1,0 +1,94 @@
+{% set live = craft.youtubelive.isLive() %}
+
+<div sprig s-trigger="every 300s" class="container {{ live ? '' : 'hide' }}">
+    <div class="row">
+        <div class="col-8">
+            {{ craft.youtubelive.embedStream() }}
+        </div>
+        <div class="col-4">
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="chat-tab" data-toggle="tab" href="#chat" role="tab"
+                       aria-controls="chat" aria-selected="true">Chat</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="notes-tab" data-toggle="tab" href="#notes" role="tab" aria-controls="notes"
+                       aria-selected="false">notes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="schedule-tab" data-toggle="tab" href="#schedule" role="tab"
+                       aria-controls="schedule" aria-selected="false">schedule</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="chat" role="tabpanel" aria-labelledby="chat-tab"
+                     style="width:100%;height: 100%">
+                    {{ craft.youtubelive.embedChat() }}
+                </div>
+                <div class="tab-pane fade" id="notes" role="tabpanel" aria-labelledby="notes-tab"
+                     style="width:100%; height: 100%">
+                    <div id="editor1"></div>
+                </div>
+                <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab"
+                     style="width:100%; height: 100%">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div sprig s-trigger="every 300s" class="container {{ live ? 'hide' : '' }}">
+        <div class="col-8">
+            {% set image = entry.images.one() %}
+            {% if image %}
+
+                {{ images.getUrl() }}
+            {% endif %}
+        </div>
+        <div class="col-4">
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" id="chat-tab" data-toggle="tab" href="#chat" role="tab"
+                       aria-controls="chat" aria-selected="true">Chat</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="notes-tab" data-toggle="tab" href="#notes" role="tab" aria-controls="notes"
+                       aria-selected="false">notes</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" id="schedule-tab" data-toggle="tab" href="#schedule" role="tab"
+                       aria-controls="schedule" aria-selected="false">schedule</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade" id="chat" role="tabpanel" aria-labelledby="chat-tab"
+                     style="width:100%;height: 100%">
+
+                </div>
+                <div class="tab-pane fade" id="notes" role="tabpanel" aria-labelledby="notes-tab"
+                     style="width:100%; height: 100%">
+                    <div id="editor1"></div>
+                </div>
+                <div class="tab-pane fade show active" id="schedule" role="tabpanel" aria-labelledby="schedule-tab"
+                     style="width:100%; height: 100%">
+                    {% include '_components/schedule' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor1'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>

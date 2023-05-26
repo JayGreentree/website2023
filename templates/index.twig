@@ -1,0 +1,28 @@
+{% extends "forms/_layout" %}
+{% set pageTitle = "Home" %}
+{% set page = "welcome" %}
+{% block content %}
+{% if header.showAlert %}
+<div class="alert alert-{{ header.alertStyle }}" role="alert">
+  <h4 class="alert-heading">{{ header.alertTitle }}</h4>
+  <p>{{ header.alert }}</p>
+</div>
+
+{% else %}
+<div class="container">
+        <div class="row">
+            <h1>
+                {{ entry.title }}
+            </h1>
+            {% set lazyImage = false %}
+            {% for block in entry.blogContent %}
+                {% include ('_partials/_' ~ 'block_' ~ block.type.handle) %}
+                {% if block.type.handle == "image" %}
+                    {% set lazyImage = true %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        {{ disqusEmbed(entry.slug, entry.title, entry.url) }}
+    </div>
+{% endif %}
+{% endblock %}

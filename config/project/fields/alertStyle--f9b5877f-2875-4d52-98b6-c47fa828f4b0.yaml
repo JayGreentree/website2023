@@ -1,0 +1,100 @@
+columnSuffix: rwbkxgqd
+contentColumnType: string
+fieldGroup: 8d062821-eba9-49af-a1e0-6a7592a2e63f # Globals
+handle: alertStyle
+instructions: null
+name: 'Alert Style'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - primary
+        -
+          - value
+          - primary
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - secondary
+        -
+          - value
+          - secondary
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - success
+        -
+          - value
+          - success
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - danger
+        -
+          - value
+          - danger
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - warning
+        -
+          - value
+          - warning
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - info
+        -
+          - value
+          - info
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - light
+        -
+          - value
+          - light
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - dark
+        -
+          - value
+          - dark
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

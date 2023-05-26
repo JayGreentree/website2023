@@ -1,0 +1,60 @@
+fieldLayouts:
+  78ed5ec6-9832-4e49-9275-3dca8c840ff8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2d1c31-d509-4982-b23a-571a07c79cb9 # Alert Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7358db00-52a1-4861-9a34-613f9715b6be
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0d7436da-5d92-4df3-a3a1-b3523e2083ac # Show Alert
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0a60e4ca-1cd6-4345-a7c6-31bc8ef01d0f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0cdcd776-f907-47b2-88ba-addf34ae5f80 # Alert
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3eabff0e-409c-4e11-b059-fe9e6ade6b24
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f9b5877f-2875-4d52-98b6-c47fa828f4b0 # Alert Style
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9c930a7d-55ab-4ad0-9e81-c0eafb83fbf3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Alert
+        uid: 57803d5e-0619-414c-8ed2-7e4eeae877f9
+        userCondition: null
+handle: header
+name: header
+sortOrder: 1

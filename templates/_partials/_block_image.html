@@ -1,0 +1,84 @@
+{% set image = block.image.one() %}
+
+{% if image %}
+{% switch block.imageType %}
+{% case "normal" %}
+<div class="wrap-fixed">
+    <section class="blog-section">
+        <div class="row top-xs">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                {% case "fullWidth" %}
+                <div class="wrap-fluid">
+                    <section class="blog-section">
+                        <div class="row top-xs">
+                            <div class="col-xs-12">
+                                {% case "infographic" %}
+                                <div class="wrap-fixed">
+                                    <section class="blog-section">
+                                        <div class="row top-xs">
+                                            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                                                {% endswitch %}
+                                                <div class="box blog-section">
+                                                    <figure class="blog">
+                                                        {% switch block.imageType %}
+                                                        {% case "normal" %}
+
+                                                        {% if lazyImage %}
+                                                        {% set image = block.image.one() %}
+                                                    {% if image %}
+                                                <img src="{{ image.getUrl('summaryImage')}}" alt="">{% endif %}
+                                                        <img class="scale-with-grid lazyload"
+                                                            src="{{ craft.imager.base64Pixel(2,1) }}" data-sizes="100vw"
+                                                            data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+                                                            alt="{{ image.title }}" height="auto" width="100%">
+                                                        {% else %}
+                                                        <img class="scale-with-grid"
+                                                            src="{{ transformedImages[1].url }}" sizes="100vw"
+                                                            srcset="{{ craft.imager.srcset(transformedImages) }}"
+                                                            alt="{{ image.title }}" height="auto" width="100%">
+                                                        {% endif %}
+                                                        {% case "fullWidth" %}
+                                                        {% set transformedImages = craft.imager.transformImage(image, [
+                                                        { width: 1200, ratio: 2/1, jpegQuality: 75 },
+                                                        { width: 1024, ratio: 2/1, jpegQuality: 75 },
+                                                        { width: 768, ratio: 4/3, jpegQuality: 60 },
+                                                        ],{ format: 'jpg', allowUpscale: false, mode: 'crop', position:
+                                                        image.focusPctX ~ '% ' ~ image.focusPctY ~ '%', interlace: true
+                                                        }) %}
+                                                        {% if lazyImage %}
+                                                        <img class="scale-with-grid lazyload"
+                                                            src="{{ craft.imager.base64Pixel(2,1) }}" data-sizes="100vw"
+                                                            data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+                                                            alt="{{ image.title }}" height="auto" width="100%">
+                                                        {% else %}
+                                                        <img class="scale-with-grid"
+                                                            src="{{ transformedImages[1].url }}" sizes="100vw"
+                                                            srcset="{{ craft.imager.srcset(transformedImages) }}"
+                                                            alt="{{ image.title }}" height="auto" width="100%">
+                                                        {% endif %}
+
+                                                        {% case "infographic" %}
+                                                        {% if lazyImage %}
+                                                        <img class="scale-with-grid lazyload"
+                                                            src="{{ craft.imager.base64Pixel(image.width, image.height) }}"
+                                                            data-src="{{ image.url }}" alt="{{ image.title }}"
+                                                            height="{{ image.height }}" width="{{ image.width }}">
+                                                        {% else %}
+                                                        <img class="scale-with-grid" src="{{ image.url }}"
+                                                            alt="{{ image.title }}" height="{{ image.height }}"
+                                                            width="{{ image.width }}">
+                                                        {% endif %}
+                                                        {% endswitch %}
+
+                                                    </figure>
+                                                    {% if block.caption |length %}
+                                                    <figcaption class="blog-image-caption">
+                                                        <p class="blog-image-caption">{{ block.caption |typogrify }}</p>
+                                                    </figcaption>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                {% endif %}

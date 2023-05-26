@@ -1,0 +1,8 @@
+
+
+    {% set live = craft.youtubelive.isLive()  %}
+        <li sprig s-trigger="every 30s" class="nav-item {{ live ? 'btn-live' : 'hidden' }}">
+            <a class="nav-link btn btn-live" href="{{ siteUrl }}/live">
+            {{ live ? 'On Air' : 'Livestream' }}
+            </a>
+        </li>

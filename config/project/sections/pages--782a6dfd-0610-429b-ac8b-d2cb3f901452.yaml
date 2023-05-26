@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: pages
+name: Pages
+propagationMethod: all
+siteSettings:
+  030d2dcd-d5bc-4228-8924-3ab95c77d733: # JayGreentree
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/_entry
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: db2ec929-12e3-4ad3-b0b6-05c7a83472dc
+type: structure

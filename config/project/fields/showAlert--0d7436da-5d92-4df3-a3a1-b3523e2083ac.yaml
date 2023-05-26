@@ -1,0 +1,14 @@
+columnSuffix: jebumwyk
+contentColumnType: boolean
+fieldGroup: 8d062821-eba9-49af-a1e0-6a7592a2e63f # Globals
+handle: showAlert
+instructions: null
+name: 'Show Alert'
+searchable: false
+settings:
+  default: false
+  offLabel: 'False'
+  onLabel: 'True'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

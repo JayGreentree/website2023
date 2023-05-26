@@ -1,0 +1,147 @@
+field: 4a958693-7fff-4370-9cb0-f29094b9a59a # Blog Content
+fieldLayouts:
+  25c2fd42-4fe9-4a78-a0b0-ca3399423d94:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 5418dc77-3a9d-47ed-86cb-86b5abc81f93 # Code
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 780ec7dc-9017-4de6-806a-3f41e4339abd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6aef760e-2f80-4846-a018-eda430717921 # Code Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d6a30bc3-3cd1-43e9-a78b-26a51feaa9cb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b071fc16-5078-49ac-9617-b1d59ff814c0 # Code Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 760d5bb6-e7d1-48c0-ba2e-2a22d158c81d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 93d11688-2b57-4852-8f7f-18671a62f73e
+        userCondition: null
+fields:
+  6aef760e-2f80-4846-a018-eda430717921: # Code Type
+    columnSuffix: mgkvelcc
+    contentColumnType: string
+    fieldGroup: null
+    handle: codeType
+    instructions: null
+    name: 'Code Type'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Twig
+            -
+              - value
+              - twig
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - PHP
+            -
+              - value
+              - php
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - HTML
+            -
+              - value
+              - html
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - JS
+            -
+              - value
+              - js
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  5418dc77-3a9d-47ed-86cb-86b5abc81f93: # Code
+    columnSuffix: aqhoamcj
+    contentColumnType: text
+    fieldGroup: null
+    handle: code
+    instructions: null
+    name: Code
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b071fc16-5078-49ac-9617-b1d59ff814c0: # Code Link
+    columnSuffix: sgqceumu
+    contentColumnType: text
+    fieldGroup: null
+    handle: codeLink
+    instructions: null
+    name: 'Code Link'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: code
+name: Code
+sortOrder: 4
