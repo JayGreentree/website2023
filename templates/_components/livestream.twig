@@ -43,7 +43,7 @@
             {% set image = entry.images.one() %}
             {% if image %}
 
-                {{ images.getUrl() }}
+               <img src="{{ images.getUrl() }}" alt="{{ image.alt }}">
             {% endif %}
         </div>
         <div class="col-4">
